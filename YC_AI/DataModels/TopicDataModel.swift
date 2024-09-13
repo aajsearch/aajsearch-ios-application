@@ -15,10 +15,13 @@ struct TopicModel {
     var description: String
 }
 
-struct ChatModel {
+struct ChatModel: Hashable {
     let id: Int
     let agentTitle: String
+    
+    // Automatically provided by Swift as long as all properties are hashable
 }
+
 
 let mockResponses: [String: [String]] = [
     "how to save money": [

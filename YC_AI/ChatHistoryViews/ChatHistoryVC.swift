@@ -1,22 +1,28 @@
 import UIKit
 
 class ChatHistoryVC: UIViewController {
-    
+
     @IBOutlet weak var tbl_chatHistory: UITableView!
     
     var chatData: [ChatModel] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Retrieve chat data from UserDefaults
         if let savedAgents = UserDefaults.standard.array(forKey: "SelectedAgents") as? [[String: Any]] {
-            chatData = savedAgents.compactMap {
+            // Use a set to filter out duplicate ChatModel instances
+            var uniqueChatData = Set<ChatModel>()
+            
+            savedAgents.forEach {
                 guard let id = $0["AgentID"] as? String, let title = $0["Name"] as? String else {
-                    return nil
+                    return
                 }
-                return ChatModel(id: Int(id) ?? 0, agentTitle: title)
+                let chatModel = ChatModel(id: Int(id) ?? 0, agentTitle: title)
+                uniqueChatData.insert(chatModel)
             }
+            
+            chatData = Array(uniqueChatData)
         }
         
         tbl_chatHistory.delegate = self

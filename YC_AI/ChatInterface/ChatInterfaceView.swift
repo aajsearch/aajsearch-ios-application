@@ -42,19 +42,11 @@ class ChatInterfaceView: UIViewController {
         tbl_chatShow.separatorStyle = .none
         
         tbl_chatShow.transform = CGAffineTransform(scaleX: 1, y: -1)
+        tbl_chatShow.rowHeight = UITableView.automaticDimension // Auto calculate row height
+        tbl_chatShow.estimatedRowHeight = 44 // Set an estimated row height
     }
     
-    
-
-   
-
-
     // MARK: - Button Actions
-    @IBAction func clk_profile(_ sender: Any) {
-        let userProfileVC = UserProfileVC(nibName: "UserProfileVC", bundle: nil)
-        self.navigationController?.pushViewController(userProfileVC, animated: true)
-    }
-
     @IBAction func clk_send(_ sender: Any) {
         if let messageText = txt_messageType.text, !messageText.isEmpty {
             messages.insert((messageText, true), at: 0)
@@ -67,15 +59,21 @@ class ChatInterfaceView: UIViewController {
             lbl_agentDescription.isHidden = true
         }
     }
-
-    @IBAction func btn_more(_ sender: Any) {
+    
+    
+    @IBAction func clk_more(_ sender: Any) {
         let chatHistoryVC = ChatHistoryVC(nibName: "ChatHistoryVC", bundle: nil)
-        chatHistoryVC.chatData = chatHistory
         self.navigationController?.pushViewController(chatHistoryVC, animated: true)
     }
     
     
     @IBAction func clk_back(_ sender: Any) {
+        let chatHistoryVC = UserProfileVC(nibName: "UserProfileVC", bundle: nil)
+        self.navigationController?.pushViewController(chatHistoryVC, animated: true)
+    }
+    
+    
+    @IBAction func clk_profile(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -149,7 +147,9 @@ extension ChatInterfaceView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ChatInterfaceView{
+extension ChatInterfaceView {
+    
+    // Setup the progress bar with steps
     func setupStepBar() {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -189,11 +189,20 @@ extension ChatInterfaceView{
         ])
     }
     
+    // Update the step progress based on current step
     func updateStepProgress(step: Int) {
         stepProgress = step
         if let stackView = vw_stepbar.subviews.first as? UIStackView {
             for (index, view) in stackView.arrangedSubviews.enumerated() {
-                view.backgroundColor = index < stepProgress ? .blue : .lightGray
+                if let imageView = view as? UIImageView {
+                    if index % 2 == 0 {
+                        // Update circle images
+                        imageView.image = UIImage(named: index < stepProgress ? "circle_fill" : "circle")
+                    } else {
+                        // Update rectangle images
+                        imageView.image = UIImage(named: index < stepProgress ? "rectangle_fill" : "rectangle")
+                    }
+                }
             }
         }
     }

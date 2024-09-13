@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInterfaceView" customModule="YC_AI" customModuleProvider="target">
             <connections>
+                <outlet property="btn_more" destination="aQx-yf-wRZ" id="12W-VW-a44"/>
                 <outlet property="btn_send" destination="ys0-Zx-eu1" id="XU2-Rc-GCN"/>
                 <outlet property="btn_userProfile" destination="1fK-s5-fMK" id="29f-OB-hdE"/>
                 <outlet property="lbl_agentDescription" destination="eDE-tl-b9W" id="aHK-Jh-8fu"/>
@@ -41,7 +42,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="ic_more"/>
                                     <connections>
-                                        <action selector="btn_more:" destination="-1" eventType="touchUpInside" id="2sv-6d-fog"/>
+                                        <action selector="clk_more:" destination="-1" eventType="touchUpInside" id="NRe-lF-dMo"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-s5-fMK">
@@ -55,7 +56,7 @@
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </state>
                                     <connections>
-                                        <action selector="clk_profile:" destination="-1" eventType="touchUpInside" id="63G-Jj-tsz"/>
+                                        <action selector="clk_profile:" destination="-1" eventType="touchUpInside" id="d5j-7Q-4Wo"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw5-vZ-woU">
@@ -67,7 +68,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="arrow-left"/>
                                     <connections>
-                                        <action selector="clk_back:" destination="-1" eventType="touchUpInside" id="2oM-sy-4OA"/>
+                                        <action selector="clk_back:" destination="-1" eventType="touchUpInside" id="Uts-wR-PsN"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -101,26 +102,27 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-oG-VlN">
-                            <rect key="frame" x="0.0" y="190" width="393" height="562"/>
+                            <rect key="frame" x="0.0" y="190" width="393" height="567"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-3E-nti">
-                            <rect key="frame" x="0.0" y="752" width="393" height="80"/>
+                            <rect key="frame" x="0.0" y="757" width="393" height="95"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="LuP-hD-0N1">
-                                    <rect key="frame" x="10" y="15" width="373" height="50"/>
+                                    <rect key="frame" x="20" y="15" width="363" height="50"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-go-adb">
-                                            <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Zx-eu1">
-                                            <rect key="frame" x="323" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="313" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="QLW-Ew-qHD"/>
                                                 <constraint firstAttribute="width" constant="50" id="udV-0L-tdg"/>
                                             </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal">
                                                 <imageReference key="image" image="arrowshape.up.circle.fill" catalog="system" symbolScale="large"/>
@@ -130,15 +132,16 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="LuP-hD-0N1" secondAttribute="bottom" constant="15" id="2ef-5o-VgQ"/>
-                                <constraint firstItem="LuP-hD-0N1" firstAttribute="leading" secondItem="aO7-3E-nti" secondAttribute="leading" constant="10" id="eo2-c7-bLB"/>
+                                <constraint firstAttribute="bottom" secondItem="LuP-hD-0N1" secondAttribute="bottom" constant="30" id="2ef-5o-VgQ"/>
+                                <constraint firstItem="LuP-hD-0N1" firstAttribute="leading" secondItem="aO7-3E-nti" secondAttribute="leading" constant="20" id="eo2-c7-bLB"/>
                                 <constraint firstItem="LuP-hD-0N1" firstAttribute="top" secondItem="aO7-3E-nti" secondAttribute="top" constant="15" id="euU-Dn-PCP"/>
                                 <constraint firstAttribute="trailing" secondItem="LuP-hD-0N1" secondAttribute="trailing" constant="10" id="mlc-FT-q5S"/>
-                                <constraint firstAttribute="height" constant="80" id="vOh-wT-75P"/>
+                                <constraint firstAttribute="height" constant="95" id="vOh-wT-75P"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-tl-b9W">
@@ -158,7 +161,7 @@
                         <constraint firstItem="aO7-3E-nti" firstAttribute="top" secondItem="gpC-oG-VlN" secondAttribute="bottom" id="HOJ-wG-toT"/>
                         <constraint firstItem="gpC-oG-VlN" firstAttribute="top" secondItem="Ztv-Y2-koo" secondAttribute="bottom" id="HZN-Qx-Gcm"/>
                         <constraint firstAttribute="trailing" secondItem="gpC-oG-VlN" secondAttribute="trailing" id="KaY-Bu-Zty"/>
-                        <constraint firstAttribute="bottom" secondItem="aO7-3E-nti" secondAttribute="bottom" constant="20" id="P7n-s9-7kC"/>
+                        <constraint firstAttribute="bottom" secondItem="aO7-3E-nti" secondAttribute="bottom" id="P7n-s9-7kC"/>
                         <constraint firstItem="aO7-3E-nti" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" id="f5n-k3-5Pl"/>
                         <constraint firstItem="Ztv-Y2-koo" firstAttribute="top" secondItem="a1l-fS-yeG" secondAttribute="bottom" id="mVN-Th-2Ct"/>
                         <constraint firstItem="6O8-Ry-cJ2" firstAttribute="top" secondItem="5X1-3c-0fg" secondAttribute="top" constant="60" id="mnu-A5-BLg"/>
@@ -191,9 +194,6 @@
         <image name="profile-circle" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

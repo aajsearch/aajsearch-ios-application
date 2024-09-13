@@ -31,7 +31,7 @@
                                 <constraint firstAttribute="width" constant="50" id="q0F-e9-2FD"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_profile"/>
+                            <state key="normal" image="profile-circle"/>
                             <connections>
                                 <action selector="clk_profile:" destination="-1" eventType="touchUpInside" id="Kvu-ZJ-fFi"/>
                             </connections>
@@ -71,7 +71,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_profile" width="6000" height="6000"/>
+        <image name="profile-circle" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
