@@ -21,34 +21,34 @@ struct ChatModel {
 }
 
 let mockResponses: [String: [String]] = [
-    "hello": [
-        "Hi there! How can I help you today?",
-        "Hello! What can I do for you?",
-        "Hey! How's it going?"
+    "how to save money": [
+        "Start by creating a budget and sticking to it.",
+        "Consider setting up a savings account with automatic transfers.",
+        "Track your spending and look for areas to cut back."
     ],
-    "how are you": [
-        "I'm just a bunch of code, but I'm doing great! How about you?",
-        "I'm here to help you! How can I assist you today?",
-        "I'm functioning as expected! What's on your mind?"
+    "best ways to invest": [
+        "Consider investing in low-cost index funds.",
+        "Look into real estate investments.",
+        "Diversify your investments to minimize risk."
     ],
-    "what is your name": [
-        "I'm your friendly AI assistant!",
-        "You can call me ChatBot!",
-        "I'm the AI assistant here to help you!"
+    "how to get out of debt": [
+        "Create a debt repayment plan and stick to it.",
+        "Consider consolidating your debts for easier management.",
+        "Cut unnecessary expenses and apply the savings towards your debt."
     ],
-    "tell me a joke": [
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "Why did the scarecrow win an award? Because he was outstanding in his field!",
-        "Why don't skeletons fight each other? They don't have the guts!"
+    "how to build an emergency fund": [
+        "Aim to save 3-6 months' worth of living expenses.",
+        "Set up a separate savings account for emergencies.",
+        "Contribute a fixed amount regularly to build the fund."
     ],
-    "what is the weather like": [
-        "It's always sunny in the digital world!",
-        "I can't check the weather, but I hope it's nice where you are!",
-        "Weather is perfect in my virtual space!"
+    "retirement planning tips": [
+        "Start saving early to take advantage of compound interest.",
+        "Consider contributing to retirement accounts like 401(k) or IRA.",
+        "Regularly review and adjust your retirement savings plan."
     ],
-    "goodbye": [
-        "Goodbye! Have a great day!",
-        "See you later! Take care!",
-        "Bye! Don't hesitate to come back if you have more questions!"
+    "what is credit score": [
+        "A credit score is a numerical representation of your creditworthiness.",
+        "It's used by lenders to evaluate your ability to repay loans.",
+        "Maintaining a good credit score can help you get better loan terms."
     ]
 ]

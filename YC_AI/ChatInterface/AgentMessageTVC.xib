@@ -16,14 +16,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0D-OG-Ocb">
-                        <rect key="frame" x="16" y="10" width="42" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0D-OG-Ocb">
+                        <rect key="frame" x="16" y="10" width="274" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="z0D-OG-Ocb" secondAttribute="trailing" constant="30" id="O5Y-3Z-Xy0"/>
                     <constraint firstItem="z0D-OG-Ocb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="WiV-O7-4KO"/>
                     <constraint firstAttribute="bottom" secondItem="z0D-OG-Ocb" secondAttribute="bottom" constant="10" id="j7l-uI-wko"/>
                     <constraint firstItem="z0D-OG-Ocb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zlE-7p-V3A"/>
