@@ -29,6 +29,9 @@
 		2A22F78B2C82FF5800093D52 /* ChatInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A22F7892C82FF5800093D52 /* ChatInterfaceView.swift */; };
 		2A22F78C2C82FF5800093D52 /* ChatInterfaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A22F78A2C82FF5800093D52 /* ChatInterfaceView.xib */; };
 		2A49A2CD2C7CA65900CD8C5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49A2CC2C7CA65900CD8C5B /* Constants.swift */; };
+		2A65146E2C94BF7100B70471 /* StartChatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65146D2C94BF7100B70471 /* StartChatDataModel.swift */; };
+		2A6514702C94C02C00B70471 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65146F2C94C02B00B70471 /* APIManager.swift */; };
+		2A6514722C94C07100B70471 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6514712C94C07100B70471 /* APIConstant.swift */; };
 		2A9716B42C87966C00623020 /* AccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9716B22C87966C00623020 /* AccountDetailsVC.swift */; };
 		2A9716B52C87966C00623020 /* AccountDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9716B32C87966C00623020 /* AccountDetailsVC.xib */; };
 		2A9716B92C87A33A00623020 /* SubsCriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9716B72C87A33A00623020 /* SubsCriptionVC.swift */; };
@@ -82,6 +85,9 @@
 		2A22F7892C82FF5800093D52 /* ChatInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInterfaceView.swift; sourceTree = "<group>"; };
 		2A22F78A2C82FF5800093D52 /* ChatInterfaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInterfaceView.xib; sourceTree = "<group>"; };
 		2A49A2CC2C7CA65900CD8C5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2A65146D2C94BF7100B70471 /* StartChatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatDataModel.swift; sourceTree = "<group>"; };
+		2A65146F2C94C02B00B70471 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2A6514712C94C07100B70471 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		2A9716B22C87966C00623020 /* AccountDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsVC.swift; sourceTree = "<group>"; };
 		2A9716B32C87966C00623020 /* AccountDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountDetailsVC.xib; sourceTree = "<group>"; };
 		2A9716B72C87A33A00623020 /* SubsCriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsCriptionVC.swift; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				2A9988072C7B404600733126 /* TopicDataModel.swift */,
+				2A65146D2C94BF7100B70471 /* StartChatDataModel.swift */,
+				2A65146F2C94C02B00B70471 /* APIManager.swift */,
+				2A6514712C94C07100B70471 /* APIConstant.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -386,9 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9988182C7B567B00733126 /* AgentMessageTVC.swift in Sources */,
+				2A65146E2C94BF7100B70471 /* StartChatDataModel.swift in Sources */,
 				2A9988012C7B3A0E00733126 /* TopicCVC.swift in Sources */,
 				2A9988082C7B404600733126 /* TopicDataModel.swift in Sources */,
 				2A9716B92C87A33A00623020 /* SubsCriptionVC.swift in Sources */,
+				2A6514722C94C07100B70471 /* APIConstant.swift in Sources */,
 				2A1304712C799200007A3137 /* AppDelegate.swift in Sources */,
 				2AC5A0902C84510F00908A26 /* ChatHistoryVC.swift in Sources */,
 				2A9988142C7B566600733126 /* UserMessageTVC.swift in Sources */,
@@ -396,6 +407,7 @@
 				2A22F78B2C82FF5800093D52 /* ChatInterfaceView.swift in Sources */,
 				2A9988052C7B3A3000733126 /* TopicWithLblCVC.swift in Sources */,
 				2A1304732C799200007A3137 /* SceneDelegate.swift in Sources */,
+				2A6514702C94C02C00B70471 /* APIManager.swift in Sources */,
 				2A1304A52C79AFD0007A3137 /* NavigationVC.swift in Sources */,
 				2AC5A0822C83154A00908A26 /* UserProfileVC.swift in Sources */,
 				2A1304A32C79AD93007A3137 /* LoginVC.swift in Sources */,

@@ -19,7 +19,6 @@ struct ChatModel: Hashable {
     let id: Int
     let agentTitle: String
     
-    // Automatically provided by Swift as long as all properties are hashable
 }
 
 
