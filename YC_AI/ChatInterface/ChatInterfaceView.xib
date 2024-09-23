@@ -30,6 +30,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5X1-3c-0fg">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-P3-wlj">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6O8-Ry-cJ2">
                             <rect key="frame" x="0.0" y="60" width="393" height="50"/>
                             <subviews>
@@ -39,6 +42,7 @@
                                         <constraint firstAttribute="height" constant="50" id="Knn-p8-OfV"/>
                                         <constraint firstAttribute="width" constant="50" id="bEL-2U-9bg"/>
                                     </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="ic_more"/>
                                     <connections>
@@ -65,6 +69,7 @@
                                         <constraint firstAttribute="height" constant="20" id="KKh-AP-z0r"/>
                                         <constraint firstAttribute="width" constant="20" id="hpJ-fW-igA"/>
                                     </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="arrow-left"/>
                                     <connections>
@@ -86,24 +91,24 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-fS-yeG">
                             <rect key="frame" x="0.0" y="110" width="393" height="55"/>
-                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="hOp-Gv-UQu"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Goal/Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztv-Y2-koo">
                             <rect key="frame" x="0.0" y="165" width="393" height="25"/>
-                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="Z4f-0B-7hd"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-oG-VlN">
                             <rect key="frame" x="0.0" y="190" width="393" height="567"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-3E-nti">
                             <rect key="frame" x="0.0" y="757" width="393" height="95"/>
@@ -111,7 +116,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="LuP-hD-0N1">
                                     <rect key="frame" x="20" y="15" width="363" height="50"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-go-adb">
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask Anything..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-go-adb">
                                             <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -122,7 +127,7 @@
                                                 <constraint firstAttribute="height" constant="50" id="QLW-Ew-qHD"/>
                                                 <constraint firstAttribute="width" constant="50" id="udV-0L-tdg"/>
                                             </constraints>
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal">
                                                 <imageReference key="image" image="arrowshape.up.circle.fill" catalog="system" symbolScale="large"/>
@@ -135,7 +140,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="LuP-hD-0N1" secondAttribute="bottom" constant="30" id="2ef-5o-VgQ"/>
                                 <constraint firstItem="LuP-hD-0N1" firstAttribute="leading" secondItem="aO7-3E-nti" secondAttribute="leading" constant="20" id="eo2-c7-bLB"/>
@@ -151,10 +156,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="0.76862745098039209" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="eDE-tl-b9W" secondAttribute="trailing" constant="20" id="0C1-jY-dzX"/>
                         <constraint firstItem="gpC-oG-VlN" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" id="17H-g2-y4c"/>
+                        <constraint firstItem="XZy-P3-wlj" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" id="6Qn-iF-Ita"/>
                         <constraint firstAttribute="trailing" secondItem="6O8-Ry-cJ2" secondAttribute="trailing" id="D1X-al-yik"/>
                         <constraint firstItem="eDE-tl-b9W" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" constant="20" id="EFt-ON-Ezz"/>
                         <constraint firstItem="a1l-fS-yeG" firstAttribute="top" secondItem="6O8-Ry-cJ2" secondAttribute="bottom" id="GqR-oy-6O6"/>
@@ -162,9 +168,12 @@
                         <constraint firstItem="gpC-oG-VlN" firstAttribute="top" secondItem="Ztv-Y2-koo" secondAttribute="bottom" id="HZN-Qx-Gcm"/>
                         <constraint firstAttribute="trailing" secondItem="gpC-oG-VlN" secondAttribute="trailing" id="KaY-Bu-Zty"/>
                         <constraint firstAttribute="bottom" secondItem="aO7-3E-nti" secondAttribute="bottom" id="P7n-s9-7kC"/>
+                        <constraint firstAttribute="bottom" secondItem="XZy-P3-wlj" secondAttribute="bottom" id="Shc-SF-BtH"/>
+                        <constraint firstItem="XZy-P3-wlj" firstAttribute="top" secondItem="5X1-3c-0fg" secondAttribute="top" id="VaV-N9-8AB"/>
                         <constraint firstItem="aO7-3E-nti" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" id="f5n-k3-5Pl"/>
                         <constraint firstItem="Ztv-Y2-koo" firstAttribute="top" secondItem="a1l-fS-yeG" secondAttribute="bottom" id="mVN-Th-2Ct"/>
                         <constraint firstItem="6O8-Ry-cJ2" firstAttribute="top" secondItem="5X1-3c-0fg" secondAttribute="top" constant="60" id="mnu-A5-BLg"/>
+                        <constraint firstAttribute="trailing" secondItem="XZy-P3-wlj" secondAttribute="trailing" id="nsq-Av-gFe"/>
                         <constraint firstItem="a1l-fS-yeG" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" id="pUv-kj-W7m"/>
                         <constraint firstItem="6O8-Ry-cJ2" firstAttribute="leading" secondItem="5X1-3c-0fg" secondAttribute="leading" id="shj-JR-ari"/>
                         <constraint firstAttribute="trailing" secondItem="a1l-fS-yeG" secondAttribute="trailing" id="veY-KV-nSH"/>
@@ -188,15 +197,13 @@
         </view>
     </objects>
     <resources>
+        <image name="Splash Screen" width="430" height="932"/>
         <image name="arrow-left" width="48" height="48"/>
         <image name="arrowshape.up.circle.fill" catalog="system" width="128" height="123"/>
         <image name="ic_more" width="24" height="24"/>
         <image name="profile-circle" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

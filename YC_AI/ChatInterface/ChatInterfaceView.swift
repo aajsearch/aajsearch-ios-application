@@ -35,6 +35,12 @@ class ChatInterfaceView: UIViewController {
         
         setupStepBar()
         checkForStoredMessages()
+        
+        btn_userProfile.layer.cornerRadius = 20
+        btn_userProfile.layer.masksToBounds = true
+        
+        txt_messageType.layer.cornerRadius = 25
+        txt_messageType.layer.masksToBounds = true
     }
 
     
