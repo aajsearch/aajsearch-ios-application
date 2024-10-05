@@ -164,7 +164,7 @@
 				2A9716BB2C87A61200623020 /* Utilities */,
 				2A9988092C7B532500733126 /* LoginVCs */,
 				2A9988062C7B3A3C00733126 /* HomeVCs */,
-				2A99880F2C7B536C00733126 /* ChatInterface */,
+				2A99880F2C7B536C00733126 /* ChatInterfaceVC */,
 				2AC5A0832C83155100908A26 /* UserProfileVC */,
 				2AC5A08C2C8450E100908A26 /* ChatHistoryViews */,
 				2A1304792C799201007A3137 /* Assets.xcassets */,
@@ -243,14 +243,14 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		2A99880F2C7B536C00733126 /* ChatInterface */ = {
+		2A99880F2C7B536C00733126 /* ChatInterfaceVC */ = {
 			isa = PBXGroup;
 			children = (
 				2A22F7892C82FF5800093D52 /* ChatInterfaceView.swift */,
 				2A22F78A2C82FF5800093D52 /* ChatInterfaceView.xib */,
 				2A9988102C7B564A00733126 /* TVCs */,
 			);
-			path = ChatInterface;
+			path = ChatInterfaceVC;
 			sourceTree = "<group>";
 		};
 		2A9988102C7B564A00733126 /* TVCs */ = {
@@ -559,7 +559,7 @@
 				CODE_SIGN_ENTITLEMENTS = YC_AI/YC_AI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BF6K382SR7;
+				DEVELOPMENT_TEAM = T5S9AMQ3RH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YC_AI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -571,7 +571,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "manek.YC-AI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aajsearch.YC-AI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -587,7 +587,7 @@
 				CODE_SIGN_ENTITLEMENTS = YC_AI/YC_AI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BF6K382SR7;
+				DEVELOPMENT_TEAM = T5S9AMQ3RH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YC_AI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -599,7 +599,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "manek.YC-AI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aajsearch.YC-AI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

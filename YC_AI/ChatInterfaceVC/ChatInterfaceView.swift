@@ -4,7 +4,7 @@ import ObjectMapper
 
 
 class ChatInterfaceView: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tbl_chatShow: UITableView!
     @IBOutlet weak var txt_messageType: UITextField!
@@ -14,23 +14,30 @@ class ChatInterfaceView: UIViewController {
     @IBOutlet weak var btn_userProfile: UIButton!
     @IBOutlet weak var btn_more: UIButton!
     @IBOutlet weak var vw_stepbar: UIView!
+    @IBOutlet weak var cons_btn_bottom: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var stk_msgType: UIStackView!
+    @IBOutlet weak var vw_static: UIView!
     
     var agentID: String?
     var agentName: String?
     var agentImageURL: String?
-    var conversationID: String? // Store conversation ID here
+    var conversationID: String?
     
     var messages: [(String, Bool)] = []
     var selectedTopics: [TopicModel] = []
     var chatHistory: [ChatModel] = []
     var stepProgress: Int = 0
-
+    
+    let phaseArray = ["Goal Understanding", "Classify", "Solve / Explain / Advise", "Adapt", "Interact / Engage", "Feedback", "Followup"]
+    
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         loadMessagesFromStorage()
-        
         lbl_agentDescription.text = "\(agentName ?? "Agent")"
         
         setupStepBar()
@@ -39,11 +46,47 @@ class ChatInterfaceView: UIViewController {
         btn_userProfile.layer.cornerRadius = 20
         btn_userProfile.layer.masksToBounds = true
         
-        txt_messageType.layer.cornerRadius = 25
+        stk_msgType.layer.cornerRadius = 20
+        stk_msgType.layer.masksToBounds = true
+        txt_messageType.layer.cornerRadius = 20
         txt_messageType.layer.masksToBounds = true
+        txt_messageType.layer.borderColor = UIColor.clear.cgColor
+        
+        cons_btn_bottom.constant = 16
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tbl_chatShow.addGestureRecognizer(tapGesture)
     }
-
     
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if cons_btn_bottom.constant == 16 {
+                cons_btn_bottom.constant =  keyboardSize.height
+                lbl_agentDescription.isHidden = true
+                UIView.animate(withDuration: 0.5) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if cons_btn_bottom.constant != 16{
+            cons_btn_bottom.constant = 16
+            checkForStoredMessages()
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    @objc func hideKeyboard() {
+        view.endEditing(true)  // Hides the keyboard
+    }
     
     // MARK: - Button Actions
     @IBAction func clk_send(_ sender: Any) {
@@ -52,26 +95,26 @@ class ChatInterfaceView: UIViewController {
             saveMessagesToStorage()
             tbl_chatShow.reloadData()
             scrollToTop()
-            sendMessage(messageText: messageText) // Handle the API call here
+            sendMessage(messageText: messageText)
             txt_messageType.text = ""
             lbl_agentDescription.isHidden = true
         }
     }
     
-    @IBAction func clk_more(_ sender: Any) {
-        let chatHistoryVC = ChatHistoryVC(nibName: "ChatHistoryVC", bundle: nil)
-        self.navigationController?.pushViewController(chatHistoryVC, animated: true)
+    @IBAction func  clk_more(_ sender: Any){
+        let chatInterfaceVC = ChatHistoryVC(nibName: "ChatHistoryVC", bundle: nil)
+        self.navigationController?.pushViewController(chatInterfaceVC, animated: true)
     }
     
-    @IBAction func clk_back(_ sender: Any) {
-       
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func  clk_profile(_ sender: Any){
+        let chatInterfaceVC = UserProfileVC(nibName: "UserProfileVC", bundle: nil)
+        self.navigationController?.pushViewController(chatInterfaceVC, animated: true)
     }
     
-    @IBAction func clk_profile(_ sender: Any) {
-        let chatHistoryVC = UserProfileVC(nibName: "UserProfileVC", bundle: nil)
-        self.navigationController?.pushViewController(chatHistoryVC, animated: true)
+    @IBAction func  clk_back(_ sender: Any){
+        navigationController?.popViewController(animated: true)
     }
+    
     
     // MARK: - Chat Logic
     func respondToMessage(messageText: String, agentResponse: String?) {
@@ -84,23 +127,38 @@ class ChatInterfaceView: UIViewController {
             self.saveMessagesToStorage()
             self.tbl_chatShow.reloadData()
             self.scrollToTop()
-            self.updateStepProgress(step: min(self.stepProgress + 1, 5))
         }
     }
-
+    
     func scrollToTop() {
         let indexPath = IndexPath(row: 0, section: 0)
         tbl_chatShow.scrollToRow(at: indexPath, at: .top, animated: true)
     }
-
+    
     // MARK: - Message Persistence
     func saveMessagesToStorage() {
+        guard let agentID = agentID else { return }
+        
         let savedMessages = messages.map { [$0.0, $0.1 ? "user" : "agent"] }
-        UserDefaults.standard.set(savedMessages, forKey: "savedChatMessages")
+        
+        // Retrieve existing messages for all agents
+        var chatStorage = UserDefaults.standard.dictionary(forKey: "agentChats") as? [String: [[String]]] ?? [:]
+        
+        // Update the chat for the current agent
+        chatStorage[agentID] = savedMessages
+        
+        // Save the updated chatStorage back to UserDefaults
+        UserDefaults.standard.set(chatStorage, forKey: "agentChats")
     }
-
+    
     func loadMessagesFromStorage() {
-        if let savedMessages = UserDefaults.standard.array(forKey: "savedChatMessages") as? [[String]] {
+        guard let agentID = agentID else { return }
+        
+        // Retrieve messages for all agents
+        let chatStorage = UserDefaults.standard.dictionary(forKey: "agentChats") as? [String: [[String]]] ?? [:]
+        
+        // Load messages specific to this agent
+        if let savedMessages = chatStorage[agentID] {
             messages = savedMessages.map { ($0[0], $0[1] == "user") }
             tbl_chatShow.reloadData()
         }
@@ -111,7 +169,6 @@ class ChatInterfaceView: UIViewController {
             lbl_agentDescription.isHidden = true
         }
     }
-
 }
 
 // MARK: - TableView DataSource & Delegate
@@ -133,17 +190,19 @@ extension ChatInterfaceView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
         if message.1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserMessageTVC", for: indexPath) as! UserMessageTVC
             cell.lbl_Message.text = message.0
+            print(cell.lbl_Message.text)
             cell.transform = CGAffineTransform(scaleX: 1, y: -1)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AgentMessageTVC", for: indexPath) as! AgentMessageTVC
             cell.lbl_Message.text = message.0
+            print(cell.lbl_Message.text)
             cell.transform = CGAffineTransform(scaleX: 1, y: -1)
             return cell
         }
@@ -151,7 +210,6 @@ extension ChatInterfaceView: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - API Handling
-
 extension ChatInterfaceView {
     
     func sendMessage(messageText: String) {
@@ -169,19 +227,28 @@ extension ChatInterfaceView {
             "user_message": messageText
         ]
         
-        // Add typing indicator message
         addTypingIndicator()
         
         APIManager.shared.MakePostAPICall(name: "start", params: params, viewController: self) { response, error, statusCode in
             
-            // Remove typing indicator after response
             self.removeTypingIndicator()
             
             if let response = response, error == nil {
                 print("Raw Response: \(response)")
-
+                
                 if let chatResponse = ChatResponseModel(JSON: response as! [String : Any]) {
                     self.conversationID = chatResponse.conversationId
+                    
+                    if let systemCommunication = chatResponse.systemCommunication,
+                       let phase = systemCommunication.phase {
+                        
+                        let phasesArray = ["Goal Understanding", "Classify", "Solve / Explain / Advise", "Adapt", "Interact / Engage", "Feedback", "Followup"]
+                        
+                        if let phaseIndex = phasesArray.firstIndex(of: phase) {
+                            self.updateStepProgress(step: phaseIndex + 1)
+                        }
+                    }
+                    
                     self.respondToMessage(messageText: messageText, agentResponse: chatResponse.agentResponse)
                 } else {
                     print("Failed to parse response")
@@ -193,6 +260,7 @@ extension ChatInterfaceView {
             }
         }
     }
+    
     
     func sendContinueMessageToAPI(messageText: String, conversationID: String) {
         let params: [String: Any] = [
@@ -202,33 +270,28 @@ extension ChatInterfaceView {
             "conversation_id": conversationID
         ]
         
-        // Add typing indicator message
         addTypingIndicator()
         
         APIManager.shared.MakePostAPICall(name: "continue", params: params, viewController: self) { response, error, statusCode in
             
-            // Remove typing indicator after response
             self.removeTypingIndicator()
             
             if let response = response, error == nil {
                 print("Raw Response: \(response)")
-
-                if let chatResponse = ContinueChatModel(JSON: response as! [String : Any]) {
-                    self.respondToMessage(messageText: messageText, agentResponse: chatResponse.agentResponse)
+                
+                if let continueChatResponse = ContinueChatModel(JSON: response as! [String : Any]) {
+                    self.conversationID = continueChatResponse.conversationId
                     
-                    // Handle the stages
-                    if let currentStage = chatResponse.currentStage {
-                        print("Current Stage: \(currentStage)")
+                    if let systemCommunication = continueChatResponse.systemCommunication,
+                       let phase = systemCommunication.phase {
+                        
+                        let phasesArray = ["Goal Understanding", "Classify", "Solve / Explain / Advise", "Adapt", "Interact / Engage", "Feedback", "Followup"]
+                        
+                        if let phaseIndex = phasesArray.firstIndex(of: phase) {
+                            self.updateStepProgress(step: phaseIndex + 1)
+                        }
                     }
-                    
-                    if let nextStage = chatResponse.nextStage {
-                        print("Next Stage: \(nextStage)")
-                    }
-                    
-                    if chatResponse.endOfConversation == true {
-                        print("The conversation has ended.")
-                    }
-
+                    self.respondToMessage(messageText: messageText, agentResponse: continueChatResponse.agentResponse)
                 } else {
                     print("Failed to parse response")
                     self.respondToMessage(messageText: messageText, agentResponse: nil)
@@ -239,39 +302,18 @@ extension ChatInterfaceView {
             }
         }
     }
-
-    // MARK: - Typing Indicator Methods
-
-    func addTypingIndicator() {
-        // Add a "Typing..." message for the agent
-        messages.insert(("Typing...", false), at: 0)
-        tbl_chatShow.reloadData()
-        scrollToTop()
-    }
-
-    func removeTypingIndicator() {
-        // Remove the "Typing..." message
-        if messages.first?.0 == "Typing..." {
-            messages.removeFirst()
-            tbl_chatShow.reloadData()
-        }
-    }
+    
+    
 }
 
-
-
-
-// MARK: - API Response Model using ObjectMapper
-
+// MARK: - Step Bar Setup and Update
 extension ChatInterfaceView {
     
-    // Setup the step bar with progress restored from UserDefaults
     func setupStepBar() {
-        // Load stored step progress from UserDefaults
         if let savedStepProgress = UserDefaults.standard.value(forKey: "stepProgress") as? Int {
             stepProgress = savedStepProgress
         }
-
+        
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 0
@@ -310,25 +352,38 @@ extension ChatInterfaceView {
         ])
     }
     
-    // Update step progress and save it to UserDefaults
     func updateStepProgress(step: Int) {
         stepProgress = step
         
-        // Save the step progress to UserDefaults
         UserDefaults.standard.set(stepProgress, forKey: "stepProgress")
         
         if let stackView = vw_stepbar.subviews.first as? UIStackView {
             for (index, view) in stackView.arrangedSubviews.enumerated() {
                 if let imageView = view as? UIImageView {
                     if index % 2 == 0 {
-                        // Update circle images
                         imageView.image = UIImage(named: index < stepProgress ? "circle_fill" : "circle")
                     } else {
-                        // Update rectangle images
                         imageView.image = UIImage(named: index < stepProgress ? "rectangle_fill" : "rectangle")
                     }
                 }
             }
+        }
+    }
+}
+
+extension ChatInterfaceView {
+    
+    // MARK: - Typing Indicator Methods
+    func addTypingIndicator() {
+        messages.insert(("Typing...", false), at: 0)
+        tbl_chatShow.reloadData()
+        scrollToTop()
+    }
+    
+    func removeTypingIndicator() {
+        if messages.first?.0 == "Typing..." {
+            messages.removeFirst()
+            tbl_chatShow.reloadData()
         }
     }
 }

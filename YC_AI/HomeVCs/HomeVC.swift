@@ -9,7 +9,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var btn_profile: UIButton!
     
    
-    var agents: [AgentModel] = [] // For storing API response
+    var agents: [AgentModel] = []
     
     let interval = 4
     let rowSpacing: CGFloat = 10
@@ -25,10 +25,6 @@ class HomeVC: UIViewController {
         
         col_TopicList.delegate = self
         col_TopicList.dataSource = self
-        
-       
-        
-        // Call the API to fetch agents data
         fetchAgentsData()
     }
     
@@ -45,13 +41,13 @@ class HomeVC: UIViewController {
         AF.request(url).responseJSON { response in
             switch response.result {
             case .success(let value):
-                print("JSON Response: \(value)") // Print the full JSON response
+                print("JSON Response: \(value)")
                 
                 if let json = value as? [String: Any] {
-                    print("Parsed JSON: \(json)") // Print the parsed JSON dictionary
+                    print("Parsed JSON: \(json)")
                     
                     if let agentsData = json["agents"] as? [[String: Any]] {
-                        print("Agents Data: \(agentsData)") // Print the agents data array
+                        print("Agents Data: \(agentsData)")
                         
                         self.agents = Mapper<AgentModel>().mapArray(JSONArray: agentsData)
                         self.col_TopicList.reloadData()
@@ -69,7 +65,7 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return agents.count // Update to use agents count instead of topics
+        return agents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -92,33 +88,26 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         }
     }
     
-    // Method to handle item selection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
            let selectedAgent = agents[indexPath.row]
            
-           // Save selected agent to UserDefaults
            let selectedAgentData: [String: Any] = [
                "AgentID": selectedAgent.AgentID ?? "",
                "Name": selectedAgent.Name ?? "",
                "Specialization": selectedAgent.Specialization ?? ""
            ]
            
-           // Retrieve existing data from UserDefaults
            var savedAgents = UserDefaults.standard.array(forKey: "SelectedAgents") as? [[String: Any]] ?? []
            
-           // Append new selection
            savedAgents.append(selectedAgentData)
            
-           // Save updated list back to UserDefaults
            UserDefaults.standard.set(savedAgents, forKey: "SelectedAgents")
            
-           // Pass the selected agent's details to ChatInterfaceVC
            let chatInterfaceVC = ChatInterfaceView(nibName: "ChatInterfaceView", bundle: nil)
            chatInterfaceVC.agentID = selectedAgent.AgentID
            chatInterfaceVC.agentName = selectedAgent.Description
            chatInterfaceVC.agentImageURL = selectedAgent.ImageURL
            
-           // Push the ChatInterfaceVC
            self.navigationController?.pushViewController(chatInterfaceVC, animated: true)
        }
     

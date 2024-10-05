@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct TopicModel {
-    var id: String // Unique ID for each topic
+    var id: String 
     var imageName: String
     var title: String
     var description: String
@@ -18,9 +18,12 @@ struct TopicModel {
 struct ChatModel: Hashable {
     let id: Int
     let agentTitle: String
-    
-}
 
+    // Custom Equatable conformance
+    static func == (lhs: ChatModel, rhs: ChatModel) -> Bool {
+        return lhs.id == rhs.id && lhs.agentTitle == rhs.agentTitle
+    }
+}
 
 let mockResponses: [String: [String]] = [
     "how to save money": [
