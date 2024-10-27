@@ -320,23 +320,17 @@ extension ChatInterfaceView {
         stackView.alignment = .center
         stackView.distribution = .fillEqually
         
-        let numberOfSteps = 7
+        let numberOfSteps = phaseArray.count
         for index in 0..<numberOfSteps {
             let stepImageView = UIImageView()
             stepImageView.translatesAutoresizingMaskIntoConstraints = false
             stepImageView.contentMode = .scaleAspectFit
             
-            if index % 2 == 0 {
-                let imageName = index < stepProgress ? "circle_fill" : "circle"
+                let imageName = index < stepProgress ? "stepFill" : "step"
                 stepImageView.image = UIImage(named: imageName)
                 stepImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
                 stepImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-            } else {
-                let imageName = index < stepProgress ? "rectangle_fill" : "rectangle"
-                stepImageView.image = UIImage(named: imageName)
-                stepImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-                stepImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-            }
+           
             
             stackView.addArrangedSubview(stepImageView)
         }

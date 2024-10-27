@@ -2,12 +2,15 @@ import UIKit
 
 class UserProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var image = ["ic_account","ic_privacy","ic_chat","ic_notification","ic_subscription"]
-    var Name = ["Account","Privacy","chats","Notification","Subscription"]
+    var image = ["person","history","mic","notification","history","insurance","google-docs"]
+    var Name = ["Account","Manage History","Voice Settings","Notification","Subscription","Privacy policy","Terms of service"]
     
     @IBOutlet weak var tbl_SettingsFeilds: UITableView!
     @IBOutlet weak var vw_Userdetail: UIView!
-
+    
+    
+    @IBOutlet weak var lbl_username: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +23,8 @@ class UserProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         tbl_SettingsFeilds.layer.masksToBounds = true
         
         tbl_SettingsFeilds.register(UINib(nibName: "SettingsFeildTVC", bundle: nil), forCellReuseIdentifier: "SettingsFeildTVC")
+        
+        lbl_username.font = appThemeFont(size: 24, fontname: .notoSemiBold)
     }
     
     
@@ -60,19 +65,36 @@ class UserProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             let accountDetailsVC = AccountDetailsVC(nibName: "AccountDetailsVC", bundle: nil)
             self.navigationController?.pushViewController(accountDetailsVC, animated: true)
             
-        case "Privacy":
-            let subscriptionVC = SubsCriptionVC(nibName: "SubsCriptionVC", bundle: nil)
+        case "Manage History":
+            let subscriptionVC = SessionHistoryVC(nibName: "SessionHistoryVC", bundle: nil)
+            subscriptionVC.hidesBottomBarWhenPushed = true
+            
+            if let navigationController = self.navigationController {
+                    navigationController.interactivePopGestureRecognizer?.isEnabled = false
+                }
             self.navigationController?.pushViewController(subscriptionVC, animated: true)
             
-        case "chats":
+        case "Voice Settings":
             let subscriptionVC = SubsCriptionVC(nibName: "SubsCriptionVC", bundle: nil)
             self.navigationController?.pushViewController(subscriptionVC, animated: true)
             
         case "Notification":
             let subscriptionVC = SubsCriptionVC(nibName: "SubsCriptionVC", bundle: nil)
             self.navigationController?.pushViewController(subscriptionVC, animated: true)
-            
+
         case "Subscription":
+            let subscriptionVC = SubsCriptionVC(nibName: "SubsCriptionVC", bundle: nil)
+            subscriptionVC.hidesBottomBarWhenPushed = true
+            if let navigationController = self.navigationController {
+                    navigationController.interactivePopGestureRecognizer?.isEnabled = false
+                }
+            self.navigationController?.pushViewController(subscriptionVC, animated: true)
+
+        case "Privacy policy":
+            let subscriptionVC = SubsCriptionVC(nibName: "SubsCriptionVC", bundle: nil)
+            self.navigationController?.pushViewController(subscriptionVC, animated: true)
+            
+        case "Terms of service":
             let subscriptionVC = SubsCriptionVC(nibName: "SubsCriptionVC", bundle: nil)
             self.navigationController?.pushViewController(subscriptionVC, animated: true)
             

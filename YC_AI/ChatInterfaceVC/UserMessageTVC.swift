@@ -15,7 +15,7 @@ class UserMessageTVC: UITableViewCell {
         super.awakeFromNib()
         lbl_Message.numberOfLines = 0 // Allow multiple lines
         lbl_Message.lineBreakMode = .byWordWrapping // Wrap text to next line
-        transform = CGAffineTransform(scaleX: 1, y: -1)
+        lbl_Message.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

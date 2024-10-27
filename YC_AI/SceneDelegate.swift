@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
         self.window = UIWindow(windowScene: windowScene)
+        
         if userDefault.bool(forKey: gm_rememberMe) {
             HomeVC()
         } else {
@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func loginVC(){
-        let mainVC = LoginVC(nibName: "LoginVC", bundle: nil)
+        let mainVC = YC_AI.TabBarVC(nibName: "TabBarVC", bundle: nil)
         navigationC = NavigationController(rootViewController: mainVC)
         navigationC.interactivePopGestureRecognizer?.isEnabled = true
         navigationC.setNavigationBarHidden(true, animated: false)
@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func HomeVC(){
-        let mainVC = YC_AI.HomeVC(nibName: "HomeVC", bundle: nil)
+        let mainVC = SelSessionHistoryVC(nibName: "SelSessionHistoryVC", bundle: nil)
         navigationC = NavigationController(rootViewController: mainVC)
         navigationC.interactivePopGestureRecognizer?.isEnabled = true
         navigationC.setNavigationBarHidden(true, animated: false)

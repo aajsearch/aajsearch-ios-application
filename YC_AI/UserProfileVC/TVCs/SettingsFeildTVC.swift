@@ -12,11 +12,11 @@ class SettingsFeildTVC: UITableViewCell {
     
     @IBOutlet weak var ic_settingFeild: UIImageView!
     @IBOutlet weak var lbl_feildName: UILabel!
-    @IBOutlet weak var img_forwardArr: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lbl_feildName.font = appThemeFont(size: 16, fontname: .notoRegular)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,4 +25,17 @@ class SettingsFeildTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+
+func appThemeFont(size : Float,fontname : themeFonts) -> UIFont {
+    return UIFont(name: fontname.rawValue, size: CGFloat(size)) ?? UIFont.systemFont(ofSize: CGFloat(size))
+}
+
+enum themeFonts : String {
+    case notoBold = "NotoSans-Bold"
+    case notoSemiBold = "Montserrat-SemiBold"
+    case notoMedium = "NotoSans-Medium"
+    case notoRegular = "Montserrat-Regular"
+    case notoLight = "NotoSans-Light"
 }

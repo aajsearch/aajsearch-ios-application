@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0067062CC2019C00B62676 /* HMSegmentedControl in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0067052CC2019C00B62676 /* HMSegmentedControl */; };
+		2A0067212CC2114700B62676 /* SessionInterfaceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0067202CC2114700B62676 /* SessionInterfaceVC.xib */; };
+		2A0067222CC2114700B62676 /* SessionInterfaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00671F2CC2114700B62676 /* SessionInterfaceVC.swift */; };
+		2A0067252CC21AB000B62676 /* SessionchatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0067242CC21AAF00B62676 /* SessionchatView.xib */; };
+		2A0067262CC21AB000B62676 /* SessionchatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0067232CC21AAF00B62676 /* SessionchatView.swift */; };
 		2A1304712C799200007A3137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1304702C799200007A3137 /* AppDelegate.swift */; };
 		2A1304732C799200007A3137 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1304722C799200007A3137 /* SceneDelegate.swift */; };
 		2A13047A2C799201007A3137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1304792C799201007A3137 /* Assets.xcassets */; };
@@ -26,12 +31,61 @@
 		2A163D062C8977F00053B4E4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A163D052C8977F00053B4E4 /* SDWebImage */; };
 		2A163D082C8977F00053B4E4 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A163D072C8977F00053B4E4 /* SDWebImageMapKit */; };
 		2A163D0E2C897B210053B4E4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A163D0D2C897B210053B4E4 /* Alamofire */; };
+		2A1A12A42CCA8CD900C2CAD3 /* SessionInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A12A22CCA8CD900C2CAD3 /* SessionInterfaceView.swift */; };
+		2A1A12A52CCA8CD900C2CAD3 /* SessionInterfaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1A12A32CCA8CD900C2CAD3 /* SessionInterfaceView.xib */; };
 		2A22F78B2C82FF5800093D52 /* ChatInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A22F7892C82FF5800093D52 /* ChatInterfaceView.swift */; };
 		2A22F78C2C82FF5800093D52 /* ChatInterfaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A22F78A2C82FF5800093D52 /* ChatInterfaceView.xib */; };
+		2A37D1A42CCB624500789D98 /* UpgradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37D1A22CCB624500789D98 /* UpgradeVC.swift */; };
+		2A37D1A52CCB624500789D98 /* UpgradeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37D1A32CCB624500789D98 /* UpgradeVC.xib */; };
+		2A3936C82CBB746E00B9CF47 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3936C62CBB746E00B9CF47 /* HomeView.swift */; };
+		2A3936C92CBB746E00B9CF47 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3936C72CBB746E00B9CF47 /* HomeView.xib */; };
+		2A416A662CBF620B00FFC71A /* SessionHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A416A642CBF620B00FFC71A /* SessionHistoryVC.swift */; };
+		2A416A672CBF620B00FFC71A /* SessionHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A416A652CBF620B00FFC71A /* SessionHistoryVC.xib */; };
+		2A416A6A2CBF630000FFC71A /* SessionHistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A416A682CBF630000FFC71A /* SessionHistoryTVC.swift */; };
+		2A416A6B2CBF630000FFC71A /* SessionHistoryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A416A692CBF630000FFC71A /* SessionHistoryTVC.xib */; };
+		2A416A722CBF6C1B00FFC71A /* SessionSubHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A416A702CBF6C1B00FFC71A /* SessionSubHistoryVC.swift */; };
+		2A416A732CBF6C1B00FFC71A /* SessionSubHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A416A712CBF6C1B00FFC71A /* SessionSubHistoryVC.xib */; };
+		2A416A762CBF6CD200FFC71A /* SessionSubHistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A416A742CBF6CD200FFC71A /* SessionSubHistoryTVC.swift */; };
+		2A416A772CBF6CD200FFC71A /* SessionSubHistoryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A416A752CBF6CD200FFC71A /* SessionSubHistoryTVC.xib */; };
+		2A416A7A2CBF707C00FFC71A /* SelSessionHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A416A782CBF707C00FFC71A /* SelSessionHistoryVC.swift */; };
+		2A416A7B2CBF707C00FFC71A /* SelSessionHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A416A792CBF707C00FFC71A /* SelSessionHistoryVC.xib */; };
 		2A49A2CD2C7CA65900CD8C5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49A2CC2C7CA65900CD8C5B /* Constants.swift */; };
+		2A5603A42CC5957800166094 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56039C2CC5957800166094 /* Montserrat-Medium.ttf */; };
+		2A5603A52CC5957800166094 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603922CC5957800166094 /* Montserrat-BlackItalic.ttf */; };
+		2A5603A62CC5957800166094 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603982CC5957800166094 /* Montserrat-ExtraLightItalic.ttf */; };
+		2A5603A72CC5957800166094 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603932CC5957800166094 /* Montserrat-Bold.ttf */; };
+		2A5603A82CC5957800166094 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603A12CC5957800166094 /* Montserrat-Thin.ttf */; };
+		2A5603A92CC5957800166094 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603972CC5957800166094 /* Montserrat-ExtraLight.ttf */; };
+		2A5603AA2CC5957800166094 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56039A2CC5957800166094 /* Montserrat-Light.ttf */; };
+		2A5603AB2CC5957800166094 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603912CC5957800166094 /* Montserrat-Black.ttf */; };
+		2A5603AC2CC5957800166094 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56039D2CC5957800166094 /* Montserrat-MediumItalic.ttf */; };
+		2A5603AD2CC5957800166094 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603A22CC5957800166094 /* Montserrat-ThinItalic.ttf */; };
+		2A5603AE2CC5957800166094 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603952CC5957800166094 /* Montserrat-ExtraBold.ttf */; };
+		2A5603AF2CC5957800166094 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603A02CC5957800166094 /* Montserrat-SemiBoldItalic.ttf */; };
+		2A5603B02CC5957800166094 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56039B2CC5957800166094 /* Montserrat-LightItalic.ttf */; };
+		2A5603B12CC5957800166094 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603942CC5957800166094 /* Montserrat-BoldItalic.ttf */; };
+		2A5603B22CC5957800166094 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56039E2CC5957800166094 /* Montserrat-Regular.ttf */; };
+		2A5603B32CC5957800166094 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603962CC5957800166094 /* Montserrat-ExtraBoldItalic.ttf */; };
+		2A5603B42CC5957800166094 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A5603992CC5957800166094 /* Montserrat-Italic.ttf */; };
+		2A5603B52CC5957800166094 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56039F2CC5957800166094 /* Montserrat-SemiBold.ttf */; };
+		2A598E912CBBDA1A007D2C35 /* ForyouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E902CBBDA1A007D2C35 /* ForyouCVC.xib */; };
+		2A598E922CBBDA1A007D2C35 /* ForyouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598E8F2CBBDA1A007D2C35 /* ForyouCVC.swift */; };
+		2A598E952CBBE7AA007D2C35 /* ExploreMore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E942CBBE7AA007D2C35 /* ExploreMore.xib */; };
+		2A598E962CBBE7AA007D2C35 /* ExploreMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598E932CBBE7AA007D2C35 /* ExploreMore.swift */; };
+		2A598E992CBC033F007D2C35 /* ExploreMoreTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E982CBC033F007D2C35 /* ExploreMoreTVC.xib */; };
+		2A598E9A2CBC033F007D2C35 /* ExploreMoreTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598E972CBC033F007D2C35 /* ExploreMoreTVC.swift */; };
+		2A598E9D2CBC09EC007D2C35 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A598E9C2CBC09EC007D2C35 /* TabbarVC.swift */; };
 		2A65146E2C94BF7100B70471 /* StartChatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65146D2C94BF7100B70471 /* StartChatDataModel.swift */; };
 		2A6514702C94C02C00B70471 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65146F2C94C02B00B70471 /* APIManager.swift */; };
 		2A6514722C94C07100B70471 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6514712C94C07100B70471 /* APIConstant.swift */; };
+		2A75961A2CC57B8A00F6FF3F /* KeypointTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7596192CC57B8A00F6FF3F /* KeypointTVC.xib */; };
+		2A75961B2CC57B8A00F6FF3F /* KeypointTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7596182CC57B8A00F6FF3F /* KeypointTVC.swift */; };
+		2A75961E2CC57EE800F6FF3F /* ActionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A75961D2CC57EE800F6FF3F /* ActionTVC.xib */; };
+		2A75961F2CC57EE800F6FF3F /* ActionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75961C2CC57EE800F6FF3F /* ActionTVC.swift */; };
+		2A96EECF2CC4FF0800DF90B4 /* UserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EECD2CC4FF0800DF90B4 /* UserTVC.swift */; };
+		2A96EED02CC4FF0800DF90B4 /* UserTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A96EECE2CC4FF0800DF90B4 /* UserTVC.xib */; };
+		2A96EED32CC4FF2F00DF90B4 /* AgentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A96EED22CC4FF2F00DF90B4 /* AgentTVC.xib */; };
+		2A96EED42CC4FF2F00DF90B4 /* AgentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EED12CC4FF2F00DF90B4 /* AgentTVC.swift */; };
 		2A9716B42C87966C00623020 /* AccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9716B22C87966C00623020 /* AccountDetailsVC.swift */; };
 		2A9716B52C87966C00623020 /* AccountDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9716B32C87966C00623020 /* AccountDetailsVC.xib */; };
 		2A9716B92C87A33A00623020 /* SubsCriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9716B72C87A33A00623020 /* SubsCriptionVC.swift */; };
@@ -56,6 +110,12 @@
 		2AC5A0902C84510F00908A26 /* ChatHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5A08D2C84510F00908A26 /* ChatHistoryVC.swift */; };
 		2AC5A0932C84533600908A26 /* ChatHistoryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A0922C84533600908A26 /* ChatHistoryTVC.xib */; };
 		2AC5A0942C84533600908A26 /* ChatHistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5A0912C84533600908A26 /* ChatHistoryTVC.swift */; };
+		2AE17EE12CBB756C00B283F9 /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE17EE02CBB756C00B283F9 /* OnboardingVC.xib */; };
+		2AE17EE22CBB756C00B283F9 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17EDF2CBB756C00B283F9 /* OnboardingVC.swift */; };
+		2AE17EE52CBB7A4200B283F9 /* OnboardingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE17EE42CBB7A4200B283F9 /* OnboardingCVC.xib */; };
+		2AE17EE62CBB7A4200B283F9 /* OnboardingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17EE32CBB7A4200B283F9 /* OnboardingCVC.swift */; };
+		2AE354812CBB6C1300850ECF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3547F2CBB6C1300850ECF /* WelcomeVC.swift */; };
+		2AE354822CBB6C1300850ECF /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE354802CBB6C1300850ECF /* WelcomeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +132,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A00671F2CC2114700B62676 /* SessionInterfaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionInterfaceVC.swift; sourceTree = "<group>"; };
+		2A0067202CC2114700B62676 /* SessionInterfaceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionInterfaceVC.xib; sourceTree = "<group>"; };
+		2A0067232CC21AAF00B62676 /* SessionchatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionchatView.swift; sourceTree = "<group>"; };
+		2A0067242CC21AAF00B62676 /* SessionchatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionchatView.xib; sourceTree = "<group>"; };
 		2A13046D2C799200007A3137 /* YC_AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YC_AI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1304702C799200007A3137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1304722C799200007A3137 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,12 +146,61 @@
 		2A1304A12C79AD93007A3137 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		2A1304A42C79AFD0007A3137 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		2A1304B62C7A0525007A3137 /* YC_AI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YC_AI.entitlements; sourceTree = "<group>"; };
+		2A1A12A22CCA8CD900C2CAD3 /* SessionInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionInterfaceView.swift; sourceTree = "<group>"; };
+		2A1A12A32CCA8CD900C2CAD3 /* SessionInterfaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionInterfaceView.xib; sourceTree = "<group>"; };
 		2A22F7892C82FF5800093D52 /* ChatInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInterfaceView.swift; sourceTree = "<group>"; };
 		2A22F78A2C82FF5800093D52 /* ChatInterfaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInterfaceView.xib; sourceTree = "<group>"; };
+		2A37D1A22CCB624500789D98 /* UpgradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeVC.swift; sourceTree = "<group>"; };
+		2A37D1A32CCB624500789D98 /* UpgradeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpgradeVC.xib; sourceTree = "<group>"; };
+		2A3936C62CBB746E00B9CF47 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2A3936C72CBB746E00B9CF47 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		2A416A642CBF620B00FFC71A /* SessionHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryVC.swift; sourceTree = "<group>"; };
+		2A416A652CBF620B00FFC71A /* SessionHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionHistoryVC.xib; sourceTree = "<group>"; };
+		2A416A682CBF630000FFC71A /* SessionHistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryTVC.swift; sourceTree = "<group>"; };
+		2A416A692CBF630000FFC71A /* SessionHistoryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionHistoryTVC.xib; sourceTree = "<group>"; };
+		2A416A702CBF6C1B00FFC71A /* SessionSubHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSubHistoryVC.swift; sourceTree = "<group>"; };
+		2A416A712CBF6C1B00FFC71A /* SessionSubHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionSubHistoryVC.xib; sourceTree = "<group>"; };
+		2A416A742CBF6CD200FFC71A /* SessionSubHistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSubHistoryTVC.swift; sourceTree = "<group>"; };
+		2A416A752CBF6CD200FFC71A /* SessionSubHistoryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionSubHistoryTVC.xib; sourceTree = "<group>"; };
+		2A416A782CBF707C00FFC71A /* SelSessionHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelSessionHistoryVC.swift; sourceTree = "<group>"; };
+		2A416A792CBF707C00FFC71A /* SelSessionHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelSessionHistoryVC.xib; sourceTree = "<group>"; };
 		2A49A2CC2C7CA65900CD8C5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2A5603912CC5957800166094 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		2A5603922CC5957800166094 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2A5603932CC5957800166094 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		2A5603942CC5957800166094 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2A5603952CC5957800166094 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2A5603962CC5957800166094 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		2A5603972CC5957800166094 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2A5603982CC5957800166094 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		2A5603992CC5957800166094 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		2A56039A2CC5957800166094 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		2A56039B2CC5957800166094 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		2A56039C2CC5957800166094 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		2A56039D2CC5957800166094 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2A56039E2CC5957800166094 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		2A56039F2CC5957800166094 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		2A5603A02CC5957800166094 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2A5603A12CC5957800166094 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		2A5603A22CC5957800166094 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		2A598E8F2CBBDA1A007D2C35 /* ForyouCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForyouCVC.swift; sourceTree = "<group>"; };
+		2A598E902CBBDA1A007D2C35 /* ForyouCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForyouCVC.xib; sourceTree = "<group>"; };
+		2A598E932CBBE7AA007D2C35 /* ExploreMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMore.swift; sourceTree = "<group>"; };
+		2A598E942CBBE7AA007D2C35 /* ExploreMore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreMore.xib; sourceTree = "<group>"; };
+		2A598E972CBC033F007D2C35 /* ExploreMoreTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMoreTVC.swift; sourceTree = "<group>"; };
+		2A598E982CBC033F007D2C35 /* ExploreMoreTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreMoreTVC.xib; sourceTree = "<group>"; };
+		2A598E9C2CBC09EC007D2C35 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		2A65146D2C94BF7100B70471 /* StartChatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatDataModel.swift; sourceTree = "<group>"; };
 		2A65146F2C94C02B00B70471 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		2A6514712C94C07100B70471 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		2A7596182CC57B8A00F6FF3F /* KeypointTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypointTVC.swift; sourceTree = "<group>"; };
+		2A7596192CC57B8A00F6FF3F /* KeypointTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeypointTVC.xib; sourceTree = "<group>"; };
+		2A75961C2CC57EE800F6FF3F /* ActionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTVC.swift; sourceTree = "<group>"; };
+		2A75961D2CC57EE800F6FF3F /* ActionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionTVC.xib; sourceTree = "<group>"; };
+		2A96EECD2CC4FF0800DF90B4 /* UserTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVC.swift; sourceTree = "<group>"; };
+		2A96EECE2CC4FF0800DF90B4 /* UserTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTVC.xib; sourceTree = "<group>"; };
+		2A96EED12CC4FF2F00DF90B4 /* AgentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentTVC.swift; sourceTree = "<group>"; };
+		2A96EED22CC4FF2F00DF90B4 /* AgentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgentTVC.xib; sourceTree = "<group>"; };
 		2A9716B22C87966C00623020 /* AccountDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsVC.swift; sourceTree = "<group>"; };
 		2A9716B32C87966C00623020 /* AccountDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountDetailsVC.xib; sourceTree = "<group>"; };
 		2A9716B72C87A33A00623020 /* SubsCriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsCriptionVC.swift; sourceTree = "<group>"; };
@@ -111,6 +224,12 @@
 		2AC5A08E2C84510F00908A26 /* ChatHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHistoryVC.xib; sourceTree = "<group>"; };
 		2AC5A0912C84533600908A26 /* ChatHistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryTVC.swift; sourceTree = "<group>"; };
 		2AC5A0922C84533600908A26 /* ChatHistoryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHistoryTVC.xib; sourceTree = "<group>"; };
+		2AE17EDF2CBB756C00B283F9 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		2AE17EE02CBB756C00B283F9 /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
+		2AE17EE32CBB7A4200B283F9 /* OnboardingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCVC.swift; sourceTree = "<group>"; };
+		2AE17EE42CBB7A4200B283F9 /* OnboardingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCVC.xib; sourceTree = "<group>"; };
+		2AE3547F2CBB6C1300850ECF /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		2AE354802CBB6C1300850ECF /* WelcomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +247,7 @@
 				2A1304B52C79FD53007A3137 /* FacebookLogin in Frameworks */,
 				2A163D062C8977F00053B4E4 /* SDWebImage in Frameworks */,
 				2A1304AA2C79D5A6007A3137 /* GoogleSignInSwift in Frameworks */,
+				2A0067062CC2019C00B62676 /* HMSegmentedControl in Frameworks */,
 				2A163D082C8977F00053B4E4 /* SDWebImageMapKit in Frameworks */,
 				2A1304B92C7A247C007A3137 /* FacebookShare in Frameworks */,
 				2A163D0E2C897B210053B4E4 /* Alamofire in Frameworks */,
@@ -160,6 +280,8 @@
 				2A1304B62C7A0525007A3137 /* YC_AI.entitlements */,
 				2A1304702C799200007A3137 /* AppDelegate.swift */,
 				2A1304722C799200007A3137 /* SceneDelegate.swift */,
+				2A37D1A62CCB624A00789D98 /* UpgradeVC */,
+				2A598E9B2CBC097C007D2C35 /* Tabbar */,
 				2A99880A2C7B533200733126 /* DataModels */,
 				2A9716BB2C87A61200623020 /* Utilities */,
 				2A9988092C7B532500733126 /* LoginVCs */,
@@ -168,6 +290,7 @@
 				2AC5A0832C83155100908A26 /* UserProfileVC */,
 				2AC5A08C2C8450E100908A26 /* ChatHistoryViews */,
 				2A1304792C799201007A3137 /* Assets.xcassets */,
+				2A5603A32CC5957800166094 /* static */,
 				2A13047B2C799201007A3137 /* LaunchScreen.storyboard */,
 				2A13047E2C799201007A3137 /* Info.plist */,
 			);
@@ -179,6 +302,116 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A37D1A62CCB624A00789D98 /* UpgradeVC */ = {
+			isa = PBXGroup;
+			children = (
+				2A37D1A22CCB624500789D98 /* UpgradeVC.swift */,
+				2A37D1A32CCB624500789D98 /* UpgradeVC.xib */,
+			);
+			path = UpgradeVC;
+			sourceTree = "<group>";
+		};
+		2A416A622CBF61D500FFC71A /* chatHistory */ = {
+			isa = PBXGroup;
+			children = (
+				2AC5A08D2C84510F00908A26 /* ChatHistoryVC.swift */,
+				2AC5A08E2C84510F00908A26 /* ChatHistoryVC.xib */,
+				2AC5A0912C84533600908A26 /* ChatHistoryTVC.swift */,
+				2AC5A0922C84533600908A26 /* ChatHistoryTVC.xib */,
+			);
+			path = chatHistory;
+			sourceTree = "<group>";
+		};
+		2A416A632CBF61E000FFC71A /* SessionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				2A416A642CBF620B00FFC71A /* SessionHistoryVC.swift */,
+				2A416A652CBF620B00FFC71A /* SessionHistoryVC.xib */,
+				2A416A682CBF630000FFC71A /* SessionHistoryTVC.swift */,
+				2A416A692CBF630000FFC71A /* SessionHistoryTVC.xib */,
+				2A416A702CBF6C1B00FFC71A /* SessionSubHistoryVC.swift */,
+				2A416A712CBF6C1B00FFC71A /* SessionSubHistoryVC.xib */,
+				2A416A742CBF6CD200FFC71A /* SessionSubHistoryTVC.swift */,
+				2A416A752CBF6CD200FFC71A /* SessionSubHistoryTVC.xib */,
+				2A416A782CBF707C00FFC71A /* SelSessionHistoryVC.swift */,
+				2A416A792CBF707C00FFC71A /* SelSessionHistoryVC.xib */,
+				2A00671F2CC2114700B62676 /* SessionInterfaceVC.swift */,
+				2A0067202CC2114700B62676 /* SessionInterfaceVC.xib */,
+				2A0067232CC21AAF00B62676 /* SessionchatView.swift */,
+				2A0067242CC21AAF00B62676 /* SessionchatView.xib */,
+				2A96EECD2CC4FF0800DF90B4 /* UserTVC.swift */,
+				2A96EECE2CC4FF0800DF90B4 /* UserTVC.xib */,
+				2A96EED12CC4FF2F00DF90B4 /* AgentTVC.swift */,
+				2A96EED22CC4FF2F00DF90B4 /* AgentTVC.xib */,
+				2A7596182CC57B8A00F6FF3F /* KeypointTVC.swift */,
+				2A7596192CC57B8A00F6FF3F /* KeypointTVC.xib */,
+				2A75961C2CC57EE800F6FF3F /* ActionTVC.swift */,
+				2A75961D2CC57EE800F6FF3F /* ActionTVC.xib */,
+			);
+			path = SessionHistory;
+			sourceTree = "<group>";
+		};
+		2A5603A32CC5957800166094 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				2A5603912CC5957800166094 /* Montserrat-Black.ttf */,
+				2A5603922CC5957800166094 /* Montserrat-BlackItalic.ttf */,
+				2A5603932CC5957800166094 /* Montserrat-Bold.ttf */,
+				2A5603942CC5957800166094 /* Montserrat-BoldItalic.ttf */,
+				2A5603952CC5957800166094 /* Montserrat-ExtraBold.ttf */,
+				2A5603962CC5957800166094 /* Montserrat-ExtraBoldItalic.ttf */,
+				2A5603972CC5957800166094 /* Montserrat-ExtraLight.ttf */,
+				2A5603982CC5957800166094 /* Montserrat-ExtraLightItalic.ttf */,
+				2A5603992CC5957800166094 /* Montserrat-Italic.ttf */,
+				2A56039A2CC5957800166094 /* Montserrat-Light.ttf */,
+				2A56039B2CC5957800166094 /* Montserrat-LightItalic.ttf */,
+				2A56039C2CC5957800166094 /* Montserrat-Medium.ttf */,
+				2A56039D2CC5957800166094 /* Montserrat-MediumItalic.ttf */,
+				2A56039E2CC5957800166094 /* Montserrat-Regular.ttf */,
+				2A56039F2CC5957800166094 /* Montserrat-SemiBold.ttf */,
+				2A5603A02CC5957800166094 /* Montserrat-SemiBoldItalic.ttf */,
+				2A5603A12CC5957800166094 /* Montserrat-Thin.ttf */,
+				2A5603A22CC5957800166094 /* Montserrat-ThinItalic.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		2A598E8D2CBBD9A7007D2C35 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2A3936C62CBB746E00B9CF47 /* HomeView.swift */,
+				2A3936C72CBB746E00B9CF47 /* HomeView.xib */,
+				2A598E8F2CBBDA1A007D2C35 /* ForyouCVC.swift */,
+				2A598E902CBBDA1A007D2C35 /* ForyouCVC.xib */,
+				2A598E932CBBE7AA007D2C35 /* ExploreMore.swift */,
+				2A598E942CBBE7AA007D2C35 /* ExploreMore.xib */,
+				2A598E972CBC033F007D2C35 /* ExploreMoreTVC.swift */,
+				2A598E982CBC033F007D2C35 /* ExploreMoreTVC.xib */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		2A598E8E2CBBD9BD007D2C35 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				2A9987FA2C7B2EFB00733126 /* HomeVC.swift */,
+				2A9987FB2C7B2EFB00733126 /* HomeVC.xib */,
+				2A9987FE2C7B3A0E00733126 /* TopicCVC.swift */,
+				2A9987FF2C7B3A0E00733126 /* TopicCVC.xib */,
+				2A9988022C7B3A3000733126 /* TopicWithLblCVC.swift */,
+				2A9988032C7B3A3000733126 /* TopicWithLblCVC.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		2A598E9B2CBC097C007D2C35 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2A598E9C2CBC09EC007D2C35 /* TabbarVC.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		2A9716B12C87926E00623020 /* TVCs */ = {
@@ -213,12 +446,10 @@
 		2A9988062C7B3A3C00733126 /* HomeVCs */ = {
 			isa = PBXGroup;
 			children = (
-				2A9987FA2C7B2EFB00733126 /* HomeVC.swift */,
-				2A9987FB2C7B2EFB00733126 /* HomeVC.xib */,
-				2A9987FE2C7B3A0E00733126 /* TopicCVC.swift */,
-				2A9987FF2C7B3A0E00733126 /* TopicCVC.xib */,
-				2A9988022C7B3A3000733126 /* TopicWithLblCVC.swift */,
-				2A9988032C7B3A3000733126 /* TopicWithLblCVC.xib */,
+				2A598E8D2CBBD9A7007D2C35 /* HomeView */,
+				2A598E8E2CBBD9BD007D2C35 /* HomeVC */,
+				2A1A12A22CCA8CD900C2CAD3 /* SessionInterfaceView.swift */,
+				2A1A12A32CCA8CD900C2CAD3 /* SessionInterfaceView.xib */,
 			);
 			path = HomeVCs;
 			sourceTree = "<group>";
@@ -228,6 +459,12 @@
 			children = (
 				2A1304A02C79AD93007A3137 /* LoginVC.swift */,
 				2A1304A12C79AD93007A3137 /* LoginVC.xib */,
+				2AE3547F2CBB6C1300850ECF /* WelcomeVC.swift */,
+				2AE354802CBB6C1300850ECF /* WelcomeVC.xib */,
+				2AE17EDF2CBB756C00B283F9 /* OnboardingVC.swift */,
+				2AE17EE02CBB756C00B283F9 /* OnboardingVC.xib */,
+				2AE17EE32CBB7A4200B283F9 /* OnboardingCVC.swift */,
+				2AE17EE42CBB7A4200B283F9 /* OnboardingCVC.xib */,
 			);
 			path = LoginVCs;
 			sourceTree = "<group>";
@@ -278,10 +515,8 @@
 		2AC5A08C2C8450E100908A26 /* ChatHistoryViews */ = {
 			isa = PBXGroup;
 			children = (
-				2AC5A08D2C84510F00908A26 /* ChatHistoryVC.swift */,
-				2AC5A08E2C84510F00908A26 /* ChatHistoryVC.xib */,
-				2AC5A0912C84533600908A26 /* ChatHistoryTVC.swift */,
-				2AC5A0922C84533600908A26 /* ChatHistoryTVC.xib */,
+				2A416A632CBF61E000FFC71A /* SessionHistory */,
+				2A416A622CBF61D500FFC71A /* chatHistory */,
 			);
 			path = ChatHistoryViews;
 			sourceTree = "<group>";
@@ -317,6 +552,7 @@
 				2A163D052C8977F00053B4E4 /* SDWebImage */,
 				2A163D072C8977F00053B4E4 /* SDWebImageMapKit */,
 				2A163D0D2C897B210053B4E4 /* Alamofire */,
+				2A0067052CC2019C00B62676 /* HMSegmentedControl */,
 			);
 			productName = YC_AI;
 			productReference = 2A13046D2C799200007A3137 /* YC_AI.app */;
@@ -354,6 +590,7 @@
 				2A163D012C8977A70053B4E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				2A163D042C8977F00053B4E4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				2A163D0C2C897B210053B4E4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2A0067042CC2019C00B62676 /* XCRemoteSwiftPackageReference "HMSegmentedControl" */,
 			);
 			productRefGroup = 2A13046E2C799200007A3137 /* Products */;
 			projectDirPath = "";
@@ -369,21 +606,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A75961A2CC57B8A00F6FF3F /* KeypointTVC.xib in Resources */,
+				2A96EED32CC4FF2F00DF90B4 /* AgentTVC.xib in Resources */,
 				2A22F78C2C82FF5800093D52 /* ChatInterfaceView.xib in Resources */,
 				2A9988002C7B3A0E00733126 /* TopicCVC.xib in Resources */,
 				2A9988172C7B567B00733126 /* AgentMessageTVC.xib in Resources */,
+				2AE354822CBB6C1300850ECF /* WelcomeVC.xib in Resources */,
+				2A416A672CBF620B00FFC71A /* SessionHistoryVC.xib in Resources */,
+				2A416A732CBF6C1B00FFC71A /* SessionSubHistoryVC.xib in Resources */,
 				2A9716B52C87966C00623020 /* AccountDetailsVC.xib in Resources */,
+				2AE17EE12CBB756C00B283F9 /* OnboardingVC.xib in Resources */,
+				2A416A772CBF6CD200FFC71A /* SessionSubHistoryTVC.xib in Resources */,
+				2A3936C92CBB746E00B9CF47 /* HomeView.xib in Resources */,
 				2A1304A22C79AD93007A3137 /* LoginVC.xib in Resources */,
+				2A416A6B2CBF630000FFC71A /* SessionHistoryTVC.xib in Resources */,
 				2AC5A0862C8334DB00908A26 /* SettingsFeildTVC.xib in Resources */,
 				2AC5A08F2C84510F00908A26 /* ChatHistoryVC.xib in Resources */,
+				2A598E912CBBDA1A007D2C35 /* ForyouCVC.xib in Resources */,
 				2A9987FC2C7B2EFB00733126 /* HomeVC.xib in Resources */,
+				2A598E992CBC033F007D2C35 /* ExploreMoreTVC.xib in Resources */,
+				2A0067212CC2114700B62676 /* SessionInterfaceVC.xib in Resources */,
 				2AC5A0812C83154A00908A26 /* UserProfileVC.xib in Resources */,
+				2A598E952CBBE7AA007D2C35 /* ExploreMore.xib in Resources */,
 				2AC5A0932C84533600908A26 /* ChatHistoryTVC.xib in Resources */,
 				2A9988042C7B3A3000733126 /* TopicWithLblCVC.xib in Resources */,
+				2A37D1A52CCB624500789D98 /* UpgradeVC.xib in Resources */,
+				2A416A7B2CBF707C00FFC71A /* SelSessionHistoryVC.xib in Resources */,
 				2A9988132C7B566600733126 /* UserMessageTVC.xib in Resources */,
 				2A13047A2C799201007A3137 /* Assets.xcassets in Resources */,
+				2A75961E2CC57EE800F6FF3F /* ActionTVC.xib in Resources */,
 				2A13047D2C799201007A3137 /* Base in Resources */,
+				2A96EED02CC4FF0800DF90B4 /* UserTVC.xib in Resources */,
+				2AE17EE52CBB7A4200B283F9 /* OnboardingCVC.xib in Resources */,
+				2A0067252CC21AB000B62676 /* SessionchatView.xib in Resources */,
 				2A9716BA2C87A33A00623020 /* SubsCriptionVC.xib in Resources */,
+				2A5603A42CC5957800166094 /* Montserrat-Medium.ttf in Resources */,
+				2A5603A52CC5957800166094 /* Montserrat-BlackItalic.ttf in Resources */,
+				2A5603A62CC5957800166094 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				2A5603A72CC5957800166094 /* Montserrat-Bold.ttf in Resources */,
+				2A5603A82CC5957800166094 /* Montserrat-Thin.ttf in Resources */,
+				2A5603A92CC5957800166094 /* Montserrat-ExtraLight.ttf in Resources */,
+				2A5603AA2CC5957800166094 /* Montserrat-Light.ttf in Resources */,
+				2A5603AB2CC5957800166094 /* Montserrat-Black.ttf in Resources */,
+				2A5603AC2CC5957800166094 /* Montserrat-MediumItalic.ttf in Resources */,
+				2A5603AD2CC5957800166094 /* Montserrat-ThinItalic.ttf in Resources */,
+				2A5603AE2CC5957800166094 /* Montserrat-ExtraBold.ttf in Resources */,
+				2A5603AF2CC5957800166094 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				2A5603B02CC5957800166094 /* Montserrat-LightItalic.ttf in Resources */,
+				2A5603B12CC5957800166094 /* Montserrat-BoldItalic.ttf in Resources */,
+				2A1A12A52CCA8CD900C2CAD3 /* SessionInterfaceView.xib in Resources */,
+				2A5603B22CC5957800166094 /* Montserrat-Regular.ttf in Resources */,
+				2A5603B32CC5957800166094 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				2A5603B42CC5957800166094 /* Montserrat-Italic.ttf in Resources */,
+				2A5603B52CC5957800166094 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,16 +670,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9988182C7B567B00733126 /* AgentMessageTVC.swift in Sources */,
+				2AE17EE22CBB756C00B283F9 /* OnboardingVC.swift in Sources */,
 				2A65146E2C94BF7100B70471 /* StartChatDataModel.swift in Sources */,
+				2A1A12A42CCA8CD900C2CAD3 /* SessionInterfaceView.swift in Sources */,
 				2A9988012C7B3A0E00733126 /* TopicCVC.swift in Sources */,
+				2A416A662CBF620B00FFC71A /* SessionHistoryVC.swift in Sources */,
+				2A75961F2CC57EE800F6FF3F /* ActionTVC.swift in Sources */,
+				2A37D1A42CCB624500789D98 /* UpgradeVC.swift in Sources */,
 				2A9988082C7B404600733126 /* TopicDataModel.swift in Sources */,
 				2A9716B92C87A33A00623020 /* SubsCriptionVC.swift in Sources */,
+				2A96EECF2CC4FF0800DF90B4 /* UserTVC.swift in Sources */,
+				2A598E9A2CBC033F007D2C35 /* ExploreMoreTVC.swift in Sources */,
 				2A6514722C94C07100B70471 /* APIConstant.swift in Sources */,
 				2A1304712C799200007A3137 /* AppDelegate.swift in Sources */,
 				2AC5A0902C84510F00908A26 /* ChatHistoryVC.swift in Sources */,
 				2A9988142C7B566600733126 /* UserMessageTVC.swift in Sources */,
+				2A598E9D2CBC09EC007D2C35 /* TabbarVC.swift in Sources */,
+				2A416A722CBF6C1B00FFC71A /* SessionSubHistoryVC.swift in Sources */,
+				2A416A6A2CBF630000FFC71A /* SessionHistoryTVC.swift in Sources */,
+				2AE354812CBB6C1300850ECF /* WelcomeVC.swift in Sources */,
+				2A416A762CBF6CD200FFC71A /* SessionSubHistoryTVC.swift in Sources */,
 				2A9987FD2C7B2EFB00733126 /* HomeVC.swift in Sources */,
 				2A22F78B2C82FF5800093D52 /* ChatInterfaceView.swift in Sources */,
+				2A0067262CC21AB000B62676 /* SessionchatView.swift in Sources */,
+				2A96EED42CC4FF2F00DF90B4 /* AgentTVC.swift in Sources */,
+				2A598E962CBBE7AA007D2C35 /* ExploreMore.swift in Sources */,
+				2A75961B2CC57B8A00F6FF3F /* KeypointTVC.swift in Sources */,
 				2A9988052C7B3A3000733126 /* TopicWithLblCVC.swift in Sources */,
 				2A1304732C799200007A3137 /* SceneDelegate.swift in Sources */,
 				2A6514702C94C02C00B70471 /* APIManager.swift in Sources */,
@@ -414,7 +705,12 @@
 				2A49A2CD2C7CA65900CD8C5B /* Constants.swift in Sources */,
 				2AC5A0942C84533600908A26 /* ChatHistoryTVC.swift in Sources */,
 				2A9716B42C87966C00623020 /* AccountDetailsVC.swift in Sources */,
+				2A416A7A2CBF707C00FFC71A /* SelSessionHistoryVC.swift in Sources */,
+				2A3936C82CBB746E00B9CF47 /* HomeView.swift in Sources */,
 				2AC5A0872C8334DB00908A26 /* SettingsFeildTVC.swift in Sources */,
+				2A598E922CBBDA1A007D2C35 /* ForyouCVC.swift in Sources */,
+				2AE17EE62CBB7A4200B283F9 /* OnboardingCVC.swift in Sources */,
+				2A0067222CC2114700B62676 /* SessionInterfaceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +927,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2A0067042CC2019C00B62676 /* XCRemoteSwiftPackageReference "HMSegmentedControl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeshamMegid/HMSegmentedControl.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		2A1304A62C79D5A6007A3137 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -690,6 +994,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2A0067052CC2019C00B62676 /* HMSegmentedControl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0067042CC2019C00B62676 /* XCRemoteSwiftPackageReference "HMSegmentedControl" */;
+			productName = HMSegmentedControl;
+		};
 		2A1304A72C79D5A6007A3137 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2A1304A62C79D5A6007A3137 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;

@@ -1,5 +1,5 @@
 {
-  "originHash" : "4721da2d972f647d60cb08058836764a0a83329b46edb23d94ec27f1af2a1e4d",
+  "originHash" : "2d5634ade69a7e6f49dbb09ca0119b4c5df1afef4d6bff1bc727fe46abc8fe34",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -71,6 +71,15 @@
       "state" : {
         "revision" : "5d7d66f647400952b1758b230e019b07c0b4b22a",
         "version" : "4.1.1"
+      }
+    },
+    {
+      "identity" : "hmsegmentedcontrol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HeshamMegid/HMSegmentedControl.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a2852bd7fe75e0e40d832873ceb0f0a4ec1b8350"
       }
     },
     {
